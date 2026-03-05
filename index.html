@@ -1,6 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Dhruv Sharma</title>'
-  <body>
-    <div>Dhruv Sharma</div>
-  </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Sharma - Software Engineer | Multicloud Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS resets and base styles */
+        :root {
+            --text-dark: #2d3e50;
+            --text-light: #6c757d;
+            --accent-yellow: #f8c24b; /* Replicating the yellow/orange pop */
+            --bg-main: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-main);
+        }
+
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 0.5rem; }
+        h2 { font-weight: 400; color: var(--text-light); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* Container for spacing */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-bracket {
+            font-family: monospace;
+            font-size: 1.8rem;
+            color: var(--text-light);
+        }
+
+        /* SVG used in place of a logo image */
+        .logo-svg {
+            height: 35px;
+            width: 150px;
+            margin: 0 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--text-dark);
+        }
+
+        nav ul li a:hover {
+            font-weight: 400;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px; /* Accounts for the absolute header */
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text-area {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-text-area p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        /* --- Embedded Flat Vector Illustration --- */
+        /* This looks heavy, but it replaces all external image files */
+        .hero-illustration {
+            flex: 1;
+            text-align: right;
+            position: relative;
+        }
+
+        .hero-illustration svg {
+            width: 90%;
+            max-width: 550px;
+            height: auto;
+        }
+
+        /* Illustration animation (like the floating screens in the image) */
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-15px); }
+            100% { transform: translatey(0px); }
+        }
+
+        .svg-screen { animation: float 6s ease-in-out infinite; }
+        .svg-monitor { animation: float 5s ease-in-out infinite 0.5s; }
+
+        /* --- Social Icons --- */
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.4rem;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Replicating the social icon colors from your image */
+        .social-icon.github { background-color: #24292e; }
+        .social-icon.linkedin { background-color: #0077b5; }
+        .social-icon.google { background-color: #db4437; }
+        .social-icon.twitter { background-color: #1da1f2; }
+        .social-icon.facebook { background-color: #1877f2; }
+        .social-icon.resume { background-color: #4b8df8; }
+
+        /* --- Responsive Design (Simple) --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            .hero-content { flex-direction: column-reverse; text-align: center; }
+            .hero-text-area { padding-right: 0; margin-top: 40px; display: flex; flex-direction: column; align-items: center; }
+            .hero-illustration { text-align: center; margin-bottom: 20px; }
+            .hero-illustration svg { width: 80%; }
+            nav ul { display: none; } /* Simulating a collapsed mobile menu */
+        }
+
+    </style>
 </head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo-box">
+                    <span class="logo-bracket"><</span>
+                    <svg class="logo-svg" viewBox="0 0 150 35">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#333;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#666;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <text x="0" y="25" fill="url(#grad1)" font-family="'Brush Script MT', cursive" font-size="28">Ashutosh Hathidara</text>
+                    </svg>
+                    <span class="logo-bracket">/></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                
+                <div class="hero-text-area">
+                    <h1>Dhruv Sharma</h1>
+                    <h2>( quirkysharma )</h2>
+                    <p>
+                        A seasoned cross platform development engineer with extensive experience in design and delivery of robust and enterprise grade applications.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Scene">
+                            <rect class="svg-screen" x="50" y="30" width="160" height="240" rx="15" fill="#e1e1e1"/>
+                            <rect class="svg-screen" x="90" y="70" width="160" height="120" rx="10" fill="#fff" stroke="#ccc"/>
+                            <rect class="svg-screen" x="90" y="200" width="160" height="40" rx="5" fill="#f4c24b"/>
+                            <rect class="svg-screen" x="350" y="100" width="180" height="120" rx="10" fill="#fff" stroke="#ccc"/>
+                            
+                            <rect class="svg-monitor" x="420" y="260" width="150" height="100" rx="10" fill="#2d3e50"/>
+                            <rect x="440" y="360" width="110" height="20" fill="#2d3e50"/>
+                            <ellipse x="495" y="380" rx="60" ry="10" fill="#ccd0d5"/>
+                            <rect x="380" y="390" width="220" height="20" rx="5" fill="#fff" stroke="#ccc"/>
+                            
+                            <ellipse id="ManHead" cx="290" cy="200" rx="30" ry="35" fill="#ffdbca"/>
+                            <path id="Hair" d="M 260 200 C 260 150, 320 150, 320 200 Z" fill="#2d3e50"/>
+                            <path id="Torso" d="M 240 235 L 340 235 L 330 400 L 250 400 Z" fill="#2d3e50"/>
+                            <rect id="ShirtPop" x="280" y="235" width="20" height="165" fill="#f4c24b"/>
+                            <path id="Arms" d="M 240 235 L 220 320, M 340 235 L 360 320" stroke="#2d3e50" stroke-width="25" fill="none" stroke-linecap="round"/>
+                            <rect id="Desk" x="200" y="400" width="400" height="20" rx="5" fill="#e1e1e1"/>
+                            <path id="Legs" d="M 250 400 L 250 500, M 330 400 L 330 500" stroke="#2d3e50" stroke-width="30" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
